@@ -40,6 +40,32 @@ return [
             ],
             'appendTimestamp' => true
         ],
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'thousandSeparator' => '.',
+            'decimalSeparator' => ',',
+            // 'currencyCode' => 'Rp ',
+            'defaultTimeZone' => 'UTC',
+            'dateFormat' => 'php:d-m-Y',
+            'datetimeFormat' => 'php:d-M-Y H:i:s',
+            'timeZone' => 'Asia/Jakarta',
+            'nullDisplay' => '-',
+            'numberFormatterOptions' => [
+                NumberFormatter::MIN_FRACTION_DIGITS => 0,
+            ],
+            'numberFormatterSymbols' => [
+                NumberFormatter::CURRENCY_SYMBOL => 'Rp',
+            ]
+        ],
+        'i18n' => [
+            'translations' => [
+                'yii2-ajaxcrud' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@yii2ajaxcrud/ajaxcrud/messages',
+                    'sourceLanguage' => 'id',
+                ],
+            ]
+        ],
     ],
     'modules' => [
         'gii' => [
